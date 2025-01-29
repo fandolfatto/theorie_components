@@ -12,21 +12,25 @@
 <body>
     <div id="app">
         <h1>Our continental food</h1>
+        <p>likes {{likes}}</p>
         <div id="wrapper">
             <food-item
                     name="Apples"
                     desc="Apples are a type of fruit that grow on trees."
-                    :healthy="healthy">
+                    :healthy="healthy"
+                    @like-product="likeProduct">
             </food-item>
             <food-item
                     name="Pizza"
                     desc="Pizza has a bread base with tomato sauce, cheese, and toppings on top."
-                    :healthy="healthy">
+                    :healthy="healthy"
+                    @like-product="likeProduct">
             </food-item>
             <food-item
                     name="Rice"
                     desc="Rice is a type of grain that people like to eat."
-                    :healthy="healthy">
+                    :healthy="healthy"
+                    @like-product="likeProduct">
             </food-item>
         </div>
     </div>
