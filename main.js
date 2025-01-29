@@ -2,7 +2,7 @@
 const App = Vue.createApp({
     data() {
         return {
-            healthy:true
+
         }
     },
     methods :{
