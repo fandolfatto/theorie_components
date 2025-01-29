@@ -8,8 +8,10 @@ const App = Vue.createApp({
         }
     },
     methods :{
-        likeProduct() {
+        likeProduct(name) {
             this.likes += 1
+            console.log(name)
+            //we could add the name in an array
         }
     }
 })

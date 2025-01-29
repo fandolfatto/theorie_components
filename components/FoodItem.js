@@ -31,7 +31,7 @@ App.component('food-item', {
     },
     methods :{
         like() {
-            this.$emit('like-product')
+            this.$emit('like-product',this.name);
         }
     }
 })
