@@ -2,13 +2,10 @@
 const App = Vue.createApp({
     data() {
         return {
-            healthy:true,
-            likes : 0
+            healthy:true
         }
     },
     methods :{
-        likeItem() {
-            this.likes += 1;
-        }
+
     }
 })
