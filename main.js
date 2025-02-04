@@ -4,12 +4,25 @@ const App = Vue.createApp({
     data() {
         return {
             healthy:true,
-            likes:0
+            likes:0,
+            foods:[]
         }
     },
+    /*props :{
+        foods :{
+            type:Array,
+            required:false
+        }
+    },*/
     methods :{
         likeProduct() {
             this.likes += 1
+        },
+        addItemFood(fooditem) {
+            console.log("dans addItemFood");
+            console.log(fooditem.name);
+            this.foods.push(fooditem);
+            console.log(this.foods.length);
         }
     }
 })

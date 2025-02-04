@@ -1,34 +1,22 @@
 App.component('food-item', {
     props : {
-        name : {
+        foods : {
             required : true,
-            type : String
-        },
-        desc : {
-            required : true,
-            type : String
-        },
-        healthy :{
-            required : false,
-            type : Boolean
+            type : Array
         }
     },
     template:
-        `<div>
-            <h2>{{ name }}</h2>
-            <p>{{ desc }}</p>
-            <p> {{ showHealthy }}</p>
-            <button class="button" v-on:click="like">like</button>
+        `<div id="wrapper">
+            <div>
+                <ul>
+                    <li v-for="(fooditem, index) in foods" :key="index">
+                        <h2>{{fooditem.name}}</h2>
+                        <p>{{fooditem.type}}</p>
+                        <p v-if="fooditem.vegetarian">Végétarien</p>
+                    </li>
+                </ul>
+            </div>
         </div>`,
-    computed : {
-        showHealthy() {
-            if (this.healthy) {
-                if (this.desc.includes("fruit")) {
-                    return "bon à la santé";
-                }
-            }
-        }
-    },
     methods :{
         like() {
             this.$emit('like-product')
