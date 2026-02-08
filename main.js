@@ -2,7 +2,8 @@
 const App = Vue.createApp({
     data() {
         return {
-
+            name: 'Apple',
+            desc: 'Great fruits'
         }
     },
     methods :{

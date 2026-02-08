@@ -13,15 +13,15 @@
     <div id="app">
         <h1>Our continental food</h1>
         <div id="wrapper">
-            <food-item>
-            </food-item>
+            <div>
+                <h2>{{ name }}</h2>
+                <p>{{ desc }}</p>
+            </div>
         </div>
     </div>
 
     <!-- import JS -->
     <script src="main.js"></script>
-    <!-- import component -->
-    <script src="components/FoodItem.js"></script>
 
     <script>
         const mountedApp = App.mount('#app')
