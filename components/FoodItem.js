@@ -8,7 +8,7 @@ App.component('food-item', {
             required : true,
             type : String
         },
-        healthy_c :{
+        healthyC :{
             required : false,
             type : Boolean
         }
@@ -21,7 +21,7 @@ App.component('food-item', {
         </div>`,
     computed : {
         showHealthy() {
-            if (this.healthy_c) {
+            if (this.healthyC) {
                 if (this.desc.includes("fruit")) {
                     return "bon à la santé";
                 }
